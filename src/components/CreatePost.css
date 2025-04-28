@@ -1,7 +1,8 @@
+/* src/components/CreatePost.css */
 .create-post-form {
   background: var(--color-card);
   border-radius: var(--radius);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: var(--gap);
   display: flex;
   flex-direction: column;
@@ -12,18 +13,25 @@
 }
 
 .create-post-form textarea {
+  background: var(--color-card);
+  color: var(--color-text);
   width: 100%;
   min-height: 100px;
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-subtle);
   border-radius: var(--radius);
   resize: vertical;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.create-post-form textarea::placeholder {
+  color: var(--color-subtle);
 }
 
 .create-post-form textarea:focus {
   border-color: var(--color-primary);
   outline: none;
+  background: var(--color-card);
 }
 
 .create-post-form button {

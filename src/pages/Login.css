@@ -1,3 +1,5 @@
+/* src/pages/Login.css */
+
 .login-container {
   display: flex;
   align-items: center;
@@ -12,7 +14,7 @@
   max-width: 360px;
   background: var(--color-card);
   border-radius: var(--radius);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: var(--gap);
   display: flex;
   flex-direction: column;
@@ -43,15 +45,23 @@
 .login-form input {
   margin-top: 0.25rem;
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  background: var(--color-card);
+  color: var(--color-text);
+  border: 1px solid var(--color-subtle);
   border-radius: var(--radius);
   font-size: 1rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.2s;
+  box-sizing: border-box;
+}
+
+.login-form input::placeholder {
+  color: var(--color-subtle);
 }
 
 .login-form input:focus {
   border-color: var(--color-primary);
   outline: none;
+  background: var(--color-card);
 }
 
 .login-form button {
@@ -79,6 +89,7 @@
   text-align: center;
   color: var(--color-subtle);
   font-size: 0.9rem;
+  margin-top: var(--gap);
 }
 
 .login-footer a {

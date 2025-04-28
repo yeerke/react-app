@@ -144,3 +144,38 @@ a:hover {
 .space-y-4 > * + * {
   margin-top: 1rem;
 }
+
+/* Dark-mode variable overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:      #121212;
+    --color-card:    #1e1e1e;
+    --color-primary: #2c2c2e;    /* ← navbar (and other primaries) switch here */
+    --color-accent:  #ffa94d;
+    --color-danger:  #ff6b6b;
+    --color-text:    #ececec;
+    --color-subtle:  #a0a0a0;
+  }
+}
+/* Manual override via classes on <html> */
+:root.light-mode {
+  /* explicitly re-apply light theme if you want */
+  --color-bg:      #f5f7fa;
+  --color-card:    #ffffff;
+  --color-primary: #3467eb;
+  --color-accent:  #ff9f1c;
+  --color-danger:  #e63946;
+  --color-text:    #333333;
+  --color-subtle:  #6c757d;
+}
+
+:root.dark-mode {
+  /* match your dark-mode palette */
+  --color-bg:      #121212;
+  --color-card:    #1e1e1e;
+  --color-primary: #2c2c2e;
+  --color-accent:  #ffa94d;
+  --color-danger:  #ff6b6b;
+  --color-text:    #ececec;
+  --color-subtle:  #a0a0a0;
+}
